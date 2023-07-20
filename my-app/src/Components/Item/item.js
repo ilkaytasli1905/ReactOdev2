@@ -22,8 +22,7 @@ const Item = ({ filterTodo, setTodos, todos }) => {
   };
 
   //Select all todos 
-  const toggleAll = () => {
-  
+  const toggleAll = () => { 
     const newTodos =   todos.map((perTodos) => {
         if (toggleState === false) {
           setToggleState(true);
@@ -34,6 +33,7 @@ const Item = ({ filterTodo, setTodos, todos }) => {
           return { ...perTodos, isChecked: false };
         }
       })
+      console.log(newTodos);
       setTodos(newTodos)
   
   };
